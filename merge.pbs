@@ -1,0 +1,9 @@
+#!/bin/bash
+#PBS -N merge
+#PBS -j eo
+#PBS -l select=1:ncpus=1:mem=12gb,walltime=24:00:00
+cd $PBS_O_WORKDIR
+
+#Name of script to run
+module load R/3.4.2-rstudio
+Rscript merge.R
